@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tide</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,400&family=IBM+Plex+Mono:wght@400&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: #111110;
+      color: #c8c7c0;
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 15px;
+      line-height: 1.7;
+      min-height: 100vh;
+      padding: 48px 24px 80px;
+    }
+
+    .wrap {
+      max-width: 760px;
+      margin: 0 auto;
+    }
+
+    .app-icon {
+      width: 80px;
+      height: 80px;
+      border-radius: 20px;
+      background: #0d2035;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: "Playfair Display", serif;
+      font-size: 36px;
+      color: #ffffff;
+      margin-bottom: 32px;
+    }
+
+    h1 {
+      font-family: "Playfair Display", serif;
+      font-size: 52px;
+      font-weight: 400;
+      color: #e8e7e0;
+      line-height: 1.1;
+      margin-bottom: 12px;
+      letter-spacing: -0.5px;
+    }
+
+    .tagline {
+      font-family: "Playfair Display", serif;
+      font-style: italic;
+      font-size: 16px;
+      color: #7a7a72;
+      margin-bottom: 48px;
+    }
+
+    blockquote {
+      border-left: 2px solid #2a2a26;
+      padding-left: 24px;
+      margin-bottom: 48px;
+      font-size: 15px;
+      color: #9a9a92;
+      line-height: 1.8;
+    }
+
+    .features {
+      list-style: none;
+      margin-bottom: 48px;
+    }
+
+    .features li {
+      display: flex;
+      align-items: baseline;
+      gap: 12px;
+      font-size: 13px;
+      letter-spacing: 0.06em;
+      color: #6a6a62;
+      padding: 6px 0;
+    }
+
+    .features li::before {
+      content: "·";
+      color: #4a4a44;
+      flex-shrink: 0;
+    }
+
+    .divider {
+      border: none;
+      border-top: 1px solid #222220;
+      margin: 40px 0;
+    }
+
+    .section-label {
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      color: #4a4a44;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .patterns {
+      display: grid;
+      gap: 1px;
+      background: #222220;
+      border: 1px solid #222220;
+      border-radius: 4px;
+      overflow: hidden;
+      margin-bottom: 48px;
+    }
+
+    .pattern {
+      background: #111110;
+      padding: 16px 20px;
+    }
+
+    .pattern-name {
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      color: #7a7a72;
+      text-transform: uppercase;
+      margin-bottom: 4px;
+    }
+
+    .pattern-rhythm {
+      font-size: 13px;
+      color: #4a8aaa;
+      margin-bottom: 4px;
+      letter-spacing: 0.02em;
+    }
+
+    .pattern-desc {
+      font-size: 13px;
+      color: #5a5a54;
+      line-height: 1.6;
+    }
+
+    .support-email {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: #4a8aaa;
+      font-size: 14px;
+      text-decoration: none;
+      margin-bottom: 12px;
+    }
+
+    .support-email:hover { color: #6aaacc; }
+
+    .support-note {
+      font-size: 13px;
+      color: #5a5a54;
+    }
+
+    .moss-note {
+      margin-top: 40px;
+      padding: 20px;
+      border: 1px solid #222220;
+      border-radius: 4px;
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+    }
+
+    .moss-icon {
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+      background: #1a3a24;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: "Playfair Display", serif;
+      font-size: 15px;
+      color: #8ab89a;
+      flex-shrink: 0;
+    }
+
+    .moss-note-text {
+      font-size: 13px;
+      color: #5a5a54;
+      line-height: 1.6;
+    }
+
+    .moss-note-text a {
+      color: #7a7a72;
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+
+    footer {
+      margin-top: 64px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 12px;
+      letter-spacing: 0.06em;
+      color: #3a3a36;
+      text-transform: uppercase;
+    }
+
+    footer a {
+      color: #3a3a36;
+      text-decoration: none;
+    }
+
+    footer a:hover { color: #6a6a62; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+
+    <div class="app-icon">t</div>
+
+    <h1>Tide</h1>
+    <p class="tagline">A breathing timer that stays out of your way.</p>
+
+    <blockquote>
+      Pick a pattern. Follow the rhythm. Let everything else settle.
+      Your sessions are saved privately on your device —
+      so the only thing on your mind is your breath.
+    </blockquote>
+
+    <ul class="features">
+      <li>THREE BREATHING PATTERNS</li>
+      <li>VISUAL AND HAPTIC BREATH GUIDE</li>
+      <li>FLEXIBLE SESSION DURATION</li>
+      <li>SESSION HISTORY</li>
+      <li>DARK MODE THROUGHOUT</li>
+      <li>NO ACCOUNTS. NO TRACKING. NO NOISE.</li>
+    </ul>
+
+    <hr class="divider">
+
+    <p class="section-label">Patterns</p>
+    <div class="patterns">
+      <div class="pattern">
+        <div class="pattern-name">Box breathing</div>
+        <div class="pattern-rhythm">inhale 4 · hold 4 · exhale 4 · hold 4</div>
+        <div class="pattern-desc">Equal parts in, hold, out, hold. Used to reset under pressure and restore calm focus.</div>
+      </div>
+      <div class="pattern">
+        <div class="pattern-name">4-7-8</div>
+        <div class="pattern-rhythm">inhale 4 · hold 7 · exhale 8</div>
+        <div class="pattern-desc">A long exhale that signals to your nervous system it's safe to slow down.</div>
+      </div>
+      <div class="pattern">
+        <div class="pattern-name">Calm</div>
+        <div class="pattern-rhythm">inhale 3 · hold 2 · exhale 5 · hold 2</div>
+        <div class="pattern-desc">A gentle everyday pattern for quiet moments and transitions.</div>
+      </div>
+    </div>
+
+    <hr class="divider">
+
+    <p class="section-label">Support</p>
+    <a class="support-email" href="mailto:gettideapp@gmail.com">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 7 10-7"/></svg>
+      gettideapp@gmail.com
+    </a>
+    <p class="support-note">Questions, feedback, or bug reports — we read everything.</p>
+
+    <div class="moss-note">
+      <div class="moss-icon">m</div>
+      <div class="moss-note-text">
+        Tide is part of the same family as <a href="https://zanali261.github.io/moss-app/">Moss</a>, a minimal meditation timer. Quiet, offline, and out of your way.
+      </div>
+    </div>
+
+    <hr class="divider">
+
+    <footer>
+      <span>&copy; 2026 TIDE</span>
+      <a href="#">PRIVACY</a>
+    </footer>
+
+  </div>
+</body>
+</html>
